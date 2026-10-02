@@ -1,0 +1,27 @@
+{
+  "stock": {"type": "cylinder", "center": [0, 0], "radius": 40, "zmin": 0, "zmax": 30},
+  "tools": [
+    {"id": "T1", "type": "flat", "diameter": 10, "fluteLength": 25},
+    {"id": "T2", "type": "ball", "diameter": 6, "fluteLength": 15}
+  ],
+  "steps": [
+    {
+      "toolId": "T1",
+      "start": {"x": -20, "y": 0, "z": 40},
+      "moves": [
+        {"type": "rapid", "to": {"x": -20, "y": 0, "z": 26}},
+        {"type": "linear", "to": {"x": 20, "y": 0, "z": 26}},
+        {"type": "arc", "center": [20, 10], "direction": "ccw", "to": {"x": 20, "y": 20, "z": 24}}
+      ]
+    },
+    {
+      "toolId": "T2",
+      "start": {"x": 0, "y": -15, "z": 40},
+      "moves": [
+        {"type": "rapid", "to": {"x": 0, "y": -15, "z": 28}},
+        {"type": "arc", "center": [0, 0], "direction": "cw", "to": {"x": 0, "y": -15, "z": 25}}
+      ]
+    }
+  ],
+  "resolution": 0.2
+}
