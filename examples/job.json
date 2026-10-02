@@ -1,0 +1,29 @@
+{
+  "stock": { "type": "box", "origin": [0, 0, 0], "size": [100, 60, 25] },
+  "tools": {
+    "T1": { "type": "flat", "diameter": 10, "fluteLength": 30 },
+    "T2": { "type": "ball", "diameter": 6, "fluteLength": 20 }
+  },
+  "resolution": 0.25,
+  "steps": [
+    {
+      "name": "rough-slot",
+      "tool": "T1",
+      "start": [10, 30, 40],
+      "moves": [
+        { "type": "rapid", "to": [10, 30, 15] },
+        { "type": "linear", "to": [90, 30, 15] },
+        { "type": "rapid", "to": [90, 30, 40] }
+      ]
+    },
+    {
+      "name": "helical-pocket-entry",
+      "tool": "T2",
+      "start": [50, 30, 40],
+      "moves": [
+        { "type": "rapid", "to": [50, 30, 25] },
+        { "type": "arc", "center": [45, 30], "cw": true, "to": [50, 30, 23] }
+      ]
+    }
+  ]
+}
